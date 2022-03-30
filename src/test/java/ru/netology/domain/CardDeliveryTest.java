@@ -308,7 +308,7 @@ public class CardDeliveryTest {
         $("[data-test-id=agreement]").click();
         $(withText("Запланировать")).click();
         $("[data-test-id=success-notification] .notification__content")
-                .should(appear, ofSeconds(15))
+                .waitUntil(visible,15)
                 .shouldHave(exactText("Встреча успешно запланирована на  " + firstDate));
         String secondDate = generateDate(5, 4);
         $("[placeholder='Дата встречи']").doubleClick().sendKeys(Keys.BACK_SPACE);
