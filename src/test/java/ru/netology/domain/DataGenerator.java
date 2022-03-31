@@ -1,8 +1,6 @@
 package ru.netology.domain;
 
 import com.github.javafaker.Faker;
-import org.junit.jupiter.api.Test;
-
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Locale;
@@ -20,7 +18,7 @@ public class DataGenerator {
     }
 
     public static String generateCity() {
-        String[] cities = new String[]{"Новосибирск", "Барнаул", "Санкт-Петербург", "Москва", "Ставрополь", "Севастополь"};
+        String[] cities = new String[]{"Новосибирск", "Барнаул", "Санкт-Петербург", "Москва", "Ставрополь", "Краснодар"};
         return cities[random.nextInt(cities.length)];
     }
 
