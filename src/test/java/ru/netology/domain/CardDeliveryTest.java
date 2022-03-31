@@ -241,20 +241,6 @@ public class CardDeliveryTest {
         $("[data-test-id='city'] input").setValue(requestInfo.getCity());
         $("[placeholder='Дата встречи']").sendKeys(chord(Keys.SHIFT, Keys.HOME), Keys.DELETE, planningDate);
         $("[data-test-id='name'] input").setValue(requestInfo.getName());
-        $("[data-test-id='phone'] input").val("79993336666");
-        $("[data-test-id=agreement]>.checkbox__box").click();
-        $(withText("Запланировать")).click();
-        $x("//*[contains(text(),'Телефон указан неверно. Должно быть 11 цифр, например, +79012345678.')]").should(appear, ofSeconds(15));
-
-    }
-
-    @Test
-    void fieldPhoneWrong2() {
-        RequestInfo requestInfo = generateRequestCard("ru");
-        String planningDate = generateDate(4, 1);
-        $("[data-test-id='city'] input").setValue(requestInfo.getCity());
-        $("[placeholder='Дата встречи']").sendKeys(chord(Keys.SHIFT, Keys.HOME), Keys.DELETE, planningDate);
-        $("[data-test-id='name'] input").setValue(requestInfo.getName());
         $("[data-test-id='phone'] input").val("+7999333666");
         $("[data-test-id=agreement]>.checkbox__box").click();
         $(withText("Запланировать")).click();
