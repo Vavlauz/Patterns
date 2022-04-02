@@ -8,6 +8,10 @@ import java.util.Locale;
 import java.util.Random;
 
 public class DataGenerator {
+    private DataGenerator() {
+
+    }
+
     private static Random random = new Random();
 
 
